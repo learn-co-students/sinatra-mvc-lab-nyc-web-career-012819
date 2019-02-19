@@ -5,7 +5,16 @@
     <title>title</title>
   </head>
   <body>
-    <h1>Pig Latinizer</h1>
-  
+    <h1>Pig Latinizer!</h1>
+    <form action="/piglatinize" method="post">
+      <p>Enter your phrase:</p>
+      <input type="text" name="user_phrase" id="phrase">
+      <!-- I can manually create hash. I will use option 2 to make Nested forms.
+We use nested forms to make more than one object. ex) prospective students(object 1) have many courses(object 2).
+1. if name='user_input', {"user_input" => "hello world"}
+2. if name="user_input[name]", {"user_input" => {"name" => "hello world"}}
+      -->
+      <button type="submit" value="submit">Submit</button>
+    </form>
   </body>
 </html>

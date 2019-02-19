@@ -18,12 +18,12 @@ class PigLatinizer
   end
 
   def handle_consonant(string)
-    head_end = 0
+    cluster_end = 0
     loop do
-      head_end += 1
-      break if is_vowel?(string[head_end])
+      cluster_end += 1
+      break if is_vowel?(string[cluster_end])
     end
 
-    string[head_end..string.length] + string[0..head_end-1] + "ay"
+    string[cluster_end..string.length] + string[0..cluster_end-1] + "ay"
   end
 end

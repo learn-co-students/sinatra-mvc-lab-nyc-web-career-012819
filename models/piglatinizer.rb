@@ -1,4 +1,5 @@
 class PigLatinizer
+
   def piglatinize(string)
     words = string.split(" ")
 
@@ -10,7 +11,7 @@ class PigLatinizer
   private
 
   def is_vowel?(char)
-    char.scan(/[aeiouAEIOU]/).length == 1
+    char.match(/[aeiouAEIOU]/) != nil ? true : false 
   end
 
   def handle_vowel(string)
@@ -26,4 +27,5 @@ class PigLatinizer
 
     string[cluster_end..string.length] + string[0..cluster_end-1] + "ay"
   end
+
 end
